@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgb(224, 244, 244);
+}
+
+$primary-color: #74c2f9;
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 40px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-weight: bold;
+
+    @media (max-width: 400px) {
+      font-size: 30px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  background-color: azure;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+
+  &_img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    box-shadow: 10px -10px 0 $primary-color;
+
+    &_cont {
+      padding-bottom: 10px;
+    }
+  }
+
+  &_name {
+    text-transform: capitalize;
+    padding-bottom: 10px;
+  }
+  &_job {
+    padding-bottom: 30px;
+
+    @media (max-width: 400px) {
+      padding-bottom: 0px;
+    }
+  }
+  &_job span {
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+
+  &_text {
+    line-height: 1.5;
+    font-size: 13px;
+    padding: 10px;
+    height: 80px;
+
+    @media (max-width: 600px) {
+      height: auto;
+    }
+  }
+
+  &_buttons {
+    gap: 30px;
+    padding: 10px;
+  }
+
+  &_surp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_btn {
+    color: $primary-color;
+    border: none;
+    border: 1px solid $primary-color;
+    border-radius: 10%;
+
+    &:hover {
+      background-color: #49a6e9;
+      cursor: pointer;
+      color: white;
+      transition: 0.5s;
+    }
+  }
+}

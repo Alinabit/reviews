@@ -1,0 +1,12 @@
+{
+  "name": "my-project",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.8.2",
+    "parcel": "^2.8.2",
+    "prettier": "2.8.2"
+  }
+}
